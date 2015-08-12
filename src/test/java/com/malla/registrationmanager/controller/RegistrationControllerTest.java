@@ -53,7 +53,7 @@ public class RegistrationControllerTest {
 		response = controller.register(credential);
 		assertThat(response).isNotNull();
 		assertThat(response.getMessage()).isEqualTo(RegistrationMessage.SUCCESS_RESPONSE);
-		assertThat(response.getType()).isEqualTo(RegistrationController.TYPE_SUCCESS);
+		assertThat(response.isSuccess()).isTrue();
 	}
 	
 	@Test
@@ -62,7 +62,7 @@ public class RegistrationControllerTest {
 		response = controller.register(credential);
 		assertThat(response).isNotNull();
 		assertThat(response.getMessage()).isEqualTo(RegistrationMessage.PWD_LENGTH);
-		assertThat(response.getType()).isEqualTo(RegistrationController.TYPE_ERROR);
+		assertThat(response.isSuccess()).isFalse();
 	}
 	
 	@Test
@@ -71,7 +71,7 @@ public class RegistrationControllerTest {
 		response = controller.register(credential);
 		assertThat(response).isNotNull();
 		assertThat(response.getMessage()).isEqualTo("IO Exception occured");
-		assertThat(response.getType()).isEqualTo(RegistrationController.TYPE_ERROR);
+		assertThat(response.isSuccess()).isFalse();
 	}
 
 }

@@ -2,14 +2,14 @@ package com.malla.registrationmanager.model;
 
 public class RegistrationResponse {
 
-	private String type;
+	private Boolean success;
 	private String message;
 	
-	public String getType() {
-		return type;
+	public Boolean isSuccess() {
+		return success;
 	}
-	public void setType(String type) {
-		this.type = type;
+	public void setSuccess(Boolean success) {
+		this.success = success;
 	}
 	public String getMessage() {
 		return message;
