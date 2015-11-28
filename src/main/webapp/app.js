@@ -2,18 +2,23 @@
     'use strict';
  
     angular
-        .module('Console', ['ngRoute'])
+        .module('Console', ['ui.router'])
         .config(config);
     
-    config.$inject = ['$routeProvider', '$locationProvider'];
-    function config($routeProvider, $locationProvider){
-    	$routeProvider
-    		.when('/register', {
-    			controller: 'RegisterController',
-    			templateUrl: 'register/register.view.html',
-    			controllerAs: 'vm'
-    		})
-    		.otherwise({redirectTo: '/register'});
+    config.$inject = ['$urlRouterProvider', '$stateProvider'];
+    function config($urlRouterProvider, $stateProvider){
+    	console.log('app.js');
+    	$urlRouterProvider
+    		.otherwise('/register');
+    	
+    	$stateProvider
+    		.state('register', {
+    			url: '/register',
+				controller: 'RegisterController',
+				templateUrl: 'register/register.view.html',
+				controllerAs: 'vm'
+    		});
+		
     }
         
         

@@ -1,6 +1,8 @@
 <div>
 	<h2>Register</h2>
+	
 	<div ng-show="vm.error" class="alert alert-danger">{{vm.error}}</div>
+	
 	<form name="form" ng-submit="vm.register()" role="form">
 		<div class="form-group" ng-class="{'has-error': form.username.$dirty && form.username.$error.required }">
 			<label for="username">Username</label>
@@ -20,6 +22,7 @@
 			<button type="submit" ng-disabled="form.invalid || vm.dataloading" class="btn btn-primary">Register</button>		
 		</div>
 	</form>
+	
 </div>
 
 <div class="col-md-4"></div>

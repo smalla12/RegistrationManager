@@ -12,8 +12,8 @@
 		return service;
 
 		function Create(user) {
-			return $http.post('api/SaveCredential', user).then(function(data) {
-				return data.data;
+			return $http.post('api/SaveCredential', user).then(function(response) {
+				return response.data;
 			});
 		}
 
