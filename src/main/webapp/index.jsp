@@ -16,6 +16,16 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
 </head>
 <body>
+	<nav class="navbar navbar-inverse">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Registration Manager</a>
+			</div>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#/register">Add New</a></li>
+			</ul>
+		</div>
+	</nav>
 
 	<div class="container">
 		<div class="row">
@@ -26,12 +36,17 @@
 				<div ui-view></div>
 			</div>
 		</div>
-
 	</div>
+	
+	<footer class="navbar-inverse">
+		<p>sandeep malla</p>
+	</footer>
 	
 	<script type="text/javascript" src="app.js"></script>
 	<script type="text/javascript" src="register/register.service.js"></script>
+	<script type="text/javascript" src="users/users.service.js"></script>
 	<script type="text/javascript" src="flash.service.js"></script>
 	<script type="text/javascript" src="register/register.controller.js"></script>
+	<script type="text/javascript" src="users/users.controller.js"></script>
 </body>
 </html>

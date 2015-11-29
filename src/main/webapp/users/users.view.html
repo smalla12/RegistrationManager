@@ -1,0 +1,8 @@
+<div class="col-md-2 col-md-offset-3">
+	<h1>Users</h1>
+	
+	<ul id="usrlist">
+		<li ng-repeat="username in usernames | orderBy:'toString()' track by $index ">{{username}}</li>
+	</ul>
+
+</div>

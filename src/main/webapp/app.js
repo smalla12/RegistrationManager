@@ -7,9 +7,8 @@
     
     config.$inject = ['$urlRouterProvider', '$stateProvider'];
     function config($urlRouterProvider, $stateProvider){
-    	console.log('app.js');
     	$urlRouterProvider
-    		.otherwise('/register');
+    		.otherwise('/users');
     	
     	$stateProvider
     		.state('register', {
@@ -17,6 +16,11 @@
 				controller: 'RegisterController',
 				templateUrl: 'register/register.view.html',
 				controllerAs: 'vm'
+    		})
+    		.state('users', {
+    			url: '/users',
+    			controller: 'UserController',
+    			templateUrl: 'users/users.view.html',
     		});
 		
     }
